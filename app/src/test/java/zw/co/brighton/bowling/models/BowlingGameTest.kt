@@ -40,4 +40,16 @@ class BowlingGameTest {
         assertEquals(61, game.getFrameScore(5))
     }
 
+    @Test
+    fun testInvalidScoreUpdateDoesNotCrash() {
+        game.updateScore(-3, 1, 10)
+        assertEquals(61, game.getFrameScore(5))
+    }
+
+    @Test
+    fun testOutOfRangeScoreIsNotSaved() {
+        game.updateScore(4, 1, 50)
+        assertEquals(133, game.getFrameScore(9))
+    }
+
 }

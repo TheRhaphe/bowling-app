@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Bowling</string>
+    <string name="update_scores">Update Scores</string>
+    <string name="zero">0</string>
+    <string name="frame_label">Frame %d</string>
+</resources>

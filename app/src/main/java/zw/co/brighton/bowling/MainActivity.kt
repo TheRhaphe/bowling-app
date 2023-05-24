@@ -15,11 +15,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         val game = BowlingGame()
+
         val dividerItemDecoration = DividerItemDecoration(
             binding.recyclerView.context,
             HORIZONTAL
         )
+
         binding.recyclerView.addItemDecoration(dividerItemDecoration)
         binding.recyclerView.adapter = ScoreFrameAdapter(game)
     }
